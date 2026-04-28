@@ -43,8 +43,8 @@
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       ;;smooth-scroll     ; So smooth you won't believe it's not butter
-       ;;tabs              ; a tab bar for Emacs
+       smooth-scroll     ; So smooth you won't believe it's not butter
+       tabs              ; a tab bar for Emacs
        ;;treemacs          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
        (vc-gutter +pretty) ; vcs diff in the fringe
@@ -89,6 +89,7 @@
        ;;grammar           ; tasing grammar mistake every you make
 
        :tools
+       lsp
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
        ;;collab            ; buffers with friends
@@ -182,12 +183,12 @@
        ;;yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
 
-       :email
+       ;; :email
        ;;(mu4e +org +gmail)
        ;;notmuch
        ;;(wanderlust +gmail)
 
-       :app
+       ;; :app
        ;;calendar
        ;;emms
        ;;everywhere        ; *leave* Emacs!? You must be joking
