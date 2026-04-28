@@ -81,4 +81,15 @@
 ;; Set font
 (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14.0 :weight 'medium))
 
+;; Enable Global Whitespace Mode
+(use-package! whitespace
+  :config
+  (setq
+   whitespace-style '(face tabs tab-mark spaces space-mark trailing newline)
+   whitespace-display-mappings '(
+     (space-mark   ?\     [?\u00B7]     [?.])
+     (space-mark   ?\xA0  [?\u00A4]     [?_])
+     (tab-mark     ?\t    [?\u00BB ?\t] [?\\ ?\t])))
+  (global-whitespace-mode +1))
+
 (provide 'config)
