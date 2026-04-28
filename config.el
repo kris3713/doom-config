@@ -92,4 +92,13 @@
      (tab-mark     ?\t    [?\u00BB ?\t] [?\\ ?\t])))
   (global-whitespace-mode +1))
 
+;; Set save to ctrl-s
+(global-set-key (kbd "C-s") 'save-buffer)
+
+;; Change incremental search keybind
+(global-set-key (kbd "C-S-s") 'isearch-forward)
+
+;; Set Ctrl-q to quit
+(global-set-key (kbd "C-q") #'save-buffers-kill-terminal)
+
 (provide 'config)
