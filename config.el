@@ -80,7 +80,10 @@
 
 ;; Set font
 (setq doom-font
-      (font-spec :family "JetBrainsMono Nerd Font" :size 14.0 :weight 'medium))
+      (font-spec
+       :family "JetBrainsMono Nerd Font"
+       :size 14.0
+       :weight 'medium))
 
 ;; Enable Global Whitespace Mode
 (use-package! whitespace
