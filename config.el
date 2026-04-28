@@ -108,13 +108,8 @@
 ;; Set :leader+e to neotree
 (map! :leader :desc "Toggle Neotree" "e" #'neotree-toggle)
 
-;; ;; Treesitter
-;; (use-package! tree-sitter
-;;   :hook (prog-mode . tree-sitter-mode)
-;;   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
-;;   :config
-;;   (require 'tree-sitter-langs)
-;;   (global-tree-sitter-mode)
-;;   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+;; Treesitter
+(add-hook 'doom-first-buffer-hook #'global-tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 
 (provide 'config)
