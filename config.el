@@ -79,7 +79,8 @@
 (setq doom-theme 'catppuccin)
 
 ;; Set font
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14.0 :weight 'medium))
+(setq doom-font
+      (font-spec :family "JetBrainsMono Nerd Font" :size 14.0 :weight 'medium))
 
 ;; Enable Global Whitespace Mode
 (use-package! whitespace
@@ -100,5 +101,17 @@
 
 ;; Set Ctrl-q to quit
 (global-set-key (kbd "C-q") #'save-buffers-kill-terminal)
+
+;; Set :leader+e to neotree
+(map! :leader :desc "Toggle Neotree" "e" #'neotree-toggle)
+
+;; Treesitter
+(use-package! tree-sitter
+  :hook (prog-mode . tree-sitter-mode)
+  :hook (tree-sitter-after-on . tree-sitter-hl-mode)
+  :config
+  (require 'tree-sitter-langs)
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
 (provide 'config)

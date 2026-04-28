@@ -55,5 +55,8 @@
 
 (package! catppuccin-theme)
 (package! nix-mode)
+(package! tree-sitter)
+(package! tree-sitter-langs)
 
 (provide 'packages)
+;;
